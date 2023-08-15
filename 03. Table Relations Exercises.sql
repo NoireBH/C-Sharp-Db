@@ -120,6 +120,7 @@ CREATE TABLE [Teachers]
 	[Name] VARCHAR(50) NOT NULL,
 	[ManagerID] INT
 	FOREIGN KEY REFERENCES [Teachers](TeacherID)
+)
 
 	INSERT INTO [Teachers] VALUES
 	('John', NULL),
@@ -128,4 +129,103 @@ CREATE TABLE [Teachers]
 	('Ted', 105),
 	('Mark', 101),
 	('Greta', 101)
+
+--5
+
+CREATE DATABASE OnlineStore
+
+USE [OnlineStore]
+
+CREATE TABLE [ItemTypes]
+(
+ [ItemTypeID] INT PRIMARY KEY IDENTITY,
+ [Name] VARCHAR(50) NOT NULL
 )
+
+CREATE TABLE [Items]
+(
+	[ItemID] INT PRIMARY KEY IDENTITY,
+	[Name] VARCHAR(50) NOT NULL,
+	[ItemTypeID] INT FOREIGN KEY REFERENCES [ItemTypes](ItemTypeID) NOT NULL
+)
+
+CREATE TABLE [Cities]
+(
+ [CityID] INT PRIMARY KEY IDENTITY,
+ [Name] VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE [Customers]
+(
+	[CustomerID] INT PRIMARY KEY,
+	[Name] VARCHAR(50) NOT NULL,
+	[Birthday] DATE NOT NULL,
+	[CityID] INT FOREIGN KEY REFERENCES [Cities](CityID) NOT NULL 
+)
+
+CREATE TABLE [Orders]
+(
+	[OrderID] INT PRIMARY KEY,
+	[CustomerID] INT FOREIGN KEY REFERENCES [Customers](CustomerID) NOT NULL
+)
+
+CREATE TABLE [OrderItems]
+(
+	[OrderID] INT FOREIGN KEY REFERENCES [Orders](OrderID) NOT NULL,
+	[ItemID] INT FOREIGN KEY REFERENCES [Items](ItemID) NOT NULL,
+	CONSTRAINT PK_OrderItems
+		PRIMARY KEY (OrderID, ItemID)
+)
+
+--6
+
+CREATE TABLE [Majors]
+(
+	[MajorID] INT NOT NULL PRIMARY KEY,
+	[Name] VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE [Subjects]
+(
+	[SubjectID] INT NOT NULL PRIMARY KEY,
+	[SubjectName] VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE [Students]
+(
+	[StudentID] INT NOT NULL PRIMARY KEY,
+	[StudentNumber] INT NOT NULL,
+	[StudentName] VARCHAR(50) NOT NULL,
+	[MajorID] INT FOREIGN KEY
+		REFERENCES [Majors](MajorID)
+)
+
+CREATE TABLE [Agenda]
+(
+	[StudentID] INT NOT NULL FOREIGN KEY
+		REFERENCES [Students](StudentID),
+	[SubjectID] INT NOT NULL FOREIGN KEY
+		REFERENCES [Subjects](SubjectID)
+	CONSTRAINT PK_Agenda 
+		PRIMARY KEY (StudentID, SubjectID)
+)
+
+CREATE TABLE [Payments]
+(
+	[PaymentID] INT NOT NULL PRIMARY KEY,
+	[PaymentDate] DATE NOT NULL,
+	[PaymentAmount] DECIMAL(6, 2),
+	[StudentID] INT NOT NULL FOREIGN KEY
+		REFERENCES [Students](StudentID)
+)
+
+--9
+
+USE [Geography]
+
+SELECT m.MountainRange, p.PeakName, p.Elevation
+FROM [Peaks] AS p
+JOIN [Mountains] AS m
+ON p.MountainId = m.Id
+WHERE m.MountainRange = 'Rila'
+ORDER BY p.Elevation DESC	
