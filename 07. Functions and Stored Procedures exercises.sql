@@ -105,3 +105,121 @@ END
 
 --8
 
+CREATE PROC usp_DeleteEmployeesFromDepartment 
+(@departmentId INT)
+AS
+BEGIN
+	ALTER TABLE [Departments]
+	ALTER COLUMN [ManagerID] INT NULL
+	
+	DELETE FROM [EmployeesProjects]	
+	WHERE [EmployeeID] IN
+	(
+		SELECT [EmployeeID] FROM [Employees]
+		WHERE [DepartmentID] = @departmentId
+	)
+
+	UPDATE [Employees]
+	SET [ManagerID] = NULL
+	WHERE [ManagerID] IN
+	(
+		SELECT [EmployeeID] FROM [Employees]
+		WHERE [DepartmentID] = @departmentId
+	)
+	
+	UPDATE [Departments]
+	SET [ManagerID] = NULL
+	WHERE [DepartmentID] = @departmentId
+	
+ 	DELETE FROM [Employees]
+	WHERE [DepartmentID] = @departmentId
+
+	DELETE FROM [Departments]
+	WHERE [DepartmentID] = @departmentId
+
+	SELECT COUNT(*) FROM [Employees]
+	WHERE [DepartmentID] = @departmentId
+END
+
+--9
+
+CREATE PROC usp_GetHoldersFullName 
+AS
+	SELECT
+		CONCAT_WS(' ', [FirstName],[LastName]) AS [Full Name]
+	FROM [AccountHolders]
+GO
+
+EXEC usp_GetHoldersFullName
+
+--10
+
+CREATE PROC usp_GetHoldersWithBalanceHigherThan
+(@numberToCompare DECIMAL(18,4))
+AS
+	SELECT
+		[FirstName],
+		[LastName]
+	FROM [AccountHolders] AS ah
+	JOIN 
+		(
+			SELECT
+			[AccountHolderId],
+			SUM(Balance) AS [TotalSum]
+			FROM [Accounts]
+			GROUP BY [AccountHolderId]
+		)  AS a ON a.AccountHolderId = ah.Id 
+	WHERE a.[TotalSum] > @numberToCompare
+	ORDER BY ah.[FirstName], ah.[LastName]
+GO
+
+EXEC usp_GetHoldersWithBalanceHigherThan 5000
+
+--11
+
+CREATE FUNCTION ufn_CalculateFutureValue 
+(@sum DECIMAL(18,4), @yearlyInterestRate FLOAT, @numberOfYears INT) 
+RETURNS DECIMAL(18, 4)
+BEGIN
+	RETURN @sum * POWER(1 + @yearlyInterestRate,@numberOfYears)
+END
+
+--12
+
+CREATE PROC usp_CalculateFutureValueForAccount
+(@accountId INT, @interestRate FLOAT)
+AS
+	SELECT
+		acc.[Id] AS [Account Id],
+		ah.[FirstName] AS [First Name],
+		ah.[LastName] AS [Last Name],
+		acc.[Balance] AS [Current Balance],
+		dbo.ufn_CalculateFutureValue(acc.[Balance], @interestRate, 5) AS [Balance in 5 years]
+	FROM [Accounts] AS [acc]
+		JOIN [AccountHolders] AS [ah]
+		ON acc.[AccountHolderId] = ah.[Id]
+	WHERE acc.[Id] = @accountId
+GO
+
+--13
+
+CREATE FUNCTION ufn_CashInUsersGames
+(@gameName VARCHAR(50))
+RETURNS TABLE
+AS
+	RETURN SELECT
+	SUM([Cash]) AS [SumCash]
+	FROM
+	(
+		SELECT
+		[GameId],
+		[Cash],
+		ROW_NUMBER() OVER(ORDER BY ug.[Cash] DESC) AS [RowNumber]
+		FROM [UsersGames] AS ug
+		JOIN [Games] AS [g] ON ug.[GameId] = g.[Id]	
+		WHERE g.[Name] = @gameName
+		GROUP BY ug.[GameId], ug.[Cash]
+	) AS [t]
+	WHERE t.[RowNumber] % 2 = 1
+
+SELECT * FROM dbo.ufn_CashInUsersGames('Love in a mist')
