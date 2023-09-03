@@ -221,7 +221,7 @@ CREATE TABLE Deleted_Employees
 	[Salary] DECIMAL(18, 2)
 )
 GO
-USE [SoftUni]
+
 CREATE TRIGGER tr_AddEntityToDeletedEmployeesTable
 ON [Employees] FOR DELETE
 AS
