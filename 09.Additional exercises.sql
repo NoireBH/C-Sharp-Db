@@ -1,4 +1,4 @@
-USE Diablo
+﻿USE Diablo
 --1
 
 SELECT
@@ -155,3 +155,115 @@ SELECT
 FROM Peaks AS p
 JOIN Mountains AS m ON p.MountainId = m.Id
 ORDER BY p.Elevation DESC, p.PeakName
+
+--9
+
+SELECT
+	p.PeakName,
+	m.MountainRange,
+	c.CountryName,
+	con.ContinentName
+FROM Peaks AS p
+JOIN Mountains AS m ON m.Id = p.MountainId
+JOIN MountainsCountries AS mc ON mc.MountainId = m.Id
+JOIN Countries AS c ON c.CountryCode = mc.CountryCode
+JOIN Continents AS con ON con.ContinentCode = c.ContinentCode
+ORDER BY PeakName,c.CountryName
+
+--10
+
+SELECT
+	c.CountryName,
+	co.ContinentName,
+	COUNT(cr.RiverId) AS RiversCount,
+	CASE
+		WHEN SUM(r.Length) IS NULL THEN 0
+		ELSE SUM(r.length)
+	END AS TotalLength
+FROM Countries AS c
+LEFT JOIN CountriesRivers AS cr ON cr.CountryCode = c.CountryCode
+LEFT JOIN Rivers AS r ON r.Id = cr.RiverId
+LEFT JOIN Continents AS co ON co.ContinentCode = c.ContinentCode
+GROUP BY c.CountryName,co.ContinentName
+ORDER BY RiversCount DESC, TotalLength DESC, CountryName
+
+--11
+
+SELECT
+	cur.CurrencyCode,
+	cur.Description AS Currency,
+	COUNT(*) AS NumberOfCountries
+FROM Currencies cur
+LEFT JOIN Countries AS c ON c.CurrencyCode = cur.CurrencyCode
+GROUP BY cur.CurrencyCode,cur.Description
+ORDER BY NumberOfCountries DESC, Currency
+
+--12
+
+SELECT
+	c.ContinentName,
+	SUM(CAST(con.AreaInSqKm AS BIGINT)) AS CountriesArea,
+	SUM(CAST(con.Population AS BIGINT)) AS CountriesPopulation
+FROM Continents AS c
+JOIN Countries AS con ON c.ContinentCode = con.ContinentCode
+GROUP BY c.ContinentName
+ORDER BY CountriesPopulation DESC
+
+--13
+
+CREATE TABLE Monasteries
+(
+    Id INT IDENTITY,
+    Name VARCHAR(50),
+    CountryCode CHAR(2) FOREIGN KEY REFERENCES Countries(CountryCode) NOT NULL
+)
+
+INSERT INTO Monasteries(Name, CountryCode) VALUES
+    ('Rila Monastery “St. Ivan of Rila”', 'BG'), 
+    ('Bachkovo Monastery “Virgin Mary”', 'BG'),
+    ('Troyan Monastery “Holy Mother''s Assumption”', 'BG'),
+    ('Kopan Monastery', 'NP'),
+    ('Thrangu Tashi Yangtse Monastery', 'NP'),
+    ('Shechen Tennyi Dargyeling Monastery', 'NP'),
+    ('Benchen Monastery', 'NP'),
+    ('Southern Shaolin Monastery', 'CN'),
+    ('Dabei Monastery', 'CN'),
+    ('Wa Sau Toi', 'CN'),
+    ('Lhunshigyia Monastery', 'CN'),
+    ('Rakya Monastery', 'CN'),
+    ('Monasteries of Meteora', 'GR'),
+    ('The Holy Monastery of Stavronikita', 'GR'),
+    ('Taung Kalat Monastery', 'MM'),
+    ('Pa-Auk Forest Monastery', 'MM'),
+    ('Taktsang Palphug Monastery', 'BT'),
+    ('Sümela Monastery', 'TR')
+
+ALTER TABLE Countries
+ADD IsDeleted BIT 
+
+UPDATE Countries
+SET IsDeleted = 0
+
+UPDATE [Countries]
+SET [IsDeleted] = 1
+WHERE CountryCode IN
+(
+	SELECT
+	c.CountryCode
+	FROM Countries AS c
+	JOIN CountriesRivers AS cr ON cr.CountryCode = c.CountryCode
+	GROUP BY c.CountryCode
+	HAVING COUNT(cr.RiverId) > 3
+)
+
+SELECT 
+    m.[Name] AS Monastery,
+    c.[CountryName] AS Country
+FROM [Monasteries] AS m 
+JOIN [Countries] AS c ON m.[CountryCode] = c.[CountryCode]
+WHERE c.[IsDeleted] = 0
+ORDER BY [Monastery] ASC
+
+UPDATE Countries
+SET CountryName = 'Myanmar'
+
