@@ -172,4 +172,38 @@ GROUP BY c.LastName,p.Name
 ORDER BY AVG(bg.Rating) DESC
 
 --11
+GO
+CREATE FUNCTION udf_CreatorWithBoardgames(@name NVARCHAR(50))
+RETURNS INT 
+AS
+BEGIN
+	DECLARE @boardgameTotal INT =
+	(	
+		SELECT
+			COUNT(cbg.BoardgameId)
+		FROM Boardgames AS bg
+		JOIN CreatorsBoardgames AS cbg ON bg.Id = cbg.BoardgameId
+		JOIN Creators AS c ON cbg.CreatorId = c.Id
+		WHERE c.FirstName = @name
+	)
 
+	RETURN @boardgameTotal
+		
+	END
+
+--12
+GO
+CREATE PROCEDURE usp_SearchByCategory(@category NVARCHAR(50))
+AS
+	SELECT
+		bg.Name
+		,bg.YearPublished
+		,bg.Rating
+		,c.Name AS CategoryName
+		,p.Name AS PublisherName
+		,CONCAT(pr.PlayersMin, ' people') AS MinPlayers
+		,CONCAT(pr.PlayersMax, ' people') AS MaxPlayers
+	FROM Boardgames AS bg
+	JOIN Publishers AS p ON bg.PublisherId = p.Id
+	JOIN Categories AS c ON bg.CategoryId = c.Id
+	JOIN PlayersRanges AS pr ON bg.PlayersRangeId = pr.Id
