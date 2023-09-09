@@ -207,3 +207,5 @@ AS
 	JOIN Publishers AS p ON bg.PublisherId = p.Id
 	JOIN Categories AS c ON bg.CategoryId = c.Id
 	JOIN PlayersRanges AS pr ON bg.PlayersRangeId = pr.Id
+	WHERE c.Name = @category
+	ORDER BY PublisherName, YearPublished DESC
