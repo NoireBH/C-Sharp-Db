@@ -16,10 +16,12 @@ namespace _02.Villain_Names
         HAVING COUNT(mv.VillainId) > 3 
         ORDER BY COUNT(mv.VillainId)";
 
-        public const string getMinionNames = 
-     @"SELECT Name FROM Villains WHERE Id = @Id
+        public const string getVillainNameById = 
+            "SELECT Name FROM Villains WHERE Id = @Id";
 
-        SELECT ROW_NUMBER() OVER (ORDER BY m.Name) AS RowNum,
+        public const string getMinionNamesAndAgeByVillainId =
+
+         @"SELECT ROW_NUMBER() OVER (ORDER BY m.Name) AS RowNum,
                                          m.Name, 
                                          m.Age
                                     FROM MinionsVillains AS mv
