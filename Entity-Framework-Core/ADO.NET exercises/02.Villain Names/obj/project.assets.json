@@ -2009,9 +2009,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\ADO.NET exercises\\02.Villain Names\\02.Villain Names.csproj",
-      "projectName": "02.Villain Names",
-      "projectPath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\ADO.NET exercises\\02.Villain Names\\02.Villain Names.csproj",
+      "projectUniqueName": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\ADO.NET exercises\\02.Villain Names\\ado.net-exercises.csproj",
+      "projectName": "ado.net-exercises",
+      "projectPath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\ADO.NET exercises\\02.Villain Names\\ado.net-exercises.csproj",
       "packagesPath": "C:\\Users\\Elmir\\.nuget\\packages\\",
       "outputPath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\ADO.NET exercises\\02.Villain Names\\obj\\",
       "projectStyle": "PackageReference",

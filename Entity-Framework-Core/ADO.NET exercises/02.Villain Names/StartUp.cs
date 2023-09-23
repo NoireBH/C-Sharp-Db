@@ -9,12 +9,12 @@ public class StartUp
         await using SqlConnection sqlConnection = new SqlConnection(Config.connectionString);
         await sqlConnection.OpenAsync();
 
-        string countryName = Console.ReadLine();
+        int[] minionIds = Console.ReadLine()
+            .Split()
+            .Select(int.Parse)
+            .ToArray();
+        
 
-        await ChangeTownNameCasingAsync(sqlConnection, countryName);
-        string result = await GetChangedTownNames(sqlConnection, countryName);
-
-        Console.WriteLine(result);
     }
 
     //2
@@ -185,7 +185,7 @@ public class StartUp
 
     //5
 
-     static async Task ChangeTownNameCasingAsync(SqlConnection connection, string countryName)
+    static async Task ChangeTownNameCasingAsync(SqlConnection connection, string countryName)
     {
         SqlCommand changeTownNameCmd = new SqlCommand(SqlQueries.changeTownNameCasingByCountry, connection);
         changeTownNameCmd.Parameters.AddWithValue("@countryName", countryName);
@@ -221,4 +221,139 @@ public class StartUp
 
         return sb.ToString().TrimEnd();
     }
+
+    //6
+
+    static async Task<string> RemoveVillainAsync(SqlConnection connection, int villainId)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        var transaction = connection.BeginTransaction();
+        try
+        {
+            bool villainExists = await GetVillainNameAsync(connection, sb, villainId, transaction);
+
+            if (!villainExists)
+            {
+                await transaction.CommitAsync();
+                return sb.ToString().TrimEnd();
+            }
+
+            await ReleaseMinionsFromVillainAsync(connection, sb, villainId, transaction);
+
+            SqlCommand removeVillainCmd = new SqlCommand(SqlQueries.removeVillainById, connection, transaction);
+            removeVillainCmd.Parameters.AddWithValue("@villainId", villainId);
+
+            await removeVillainCmd.ExecuteNonQueryAsync();
+
+            await transaction.CommitAsync();
+        }
+        catch (Exception e)
+        {
+            await transaction.RollbackAsync();
+        }
+
+        return sb.ToString().TrimEnd();
+
+    }
+
+    private static async Task<bool> GetVillainNameAsync(SqlConnection connection, StringBuilder sb, int villainId, SqlTransaction transaction)
+    {
+
+        string villainName = string.Empty;
+
+        SqlCommand getVillainNameCmd = new SqlCommand(SqlQueries.getVillainNameById, connection, transaction);
+        getVillainNameCmd.Parameters.AddWithValue("@Id", villainId);
+
+        object? villainNameObj = await getVillainNameCmd.ExecuteScalarAsync();
+
+        if (villainNameObj == null)
+        {
+            sb.AppendLine("No such villain was found.");
+            return false;
+        }
+
+        else
+        {
+            villainName = (string)villainNameObj;
+            sb.AppendLine($"{villainName} was deleted.");
+            return true;
+        }
+    }
+
+    private static async Task ReleaseMinionsFromVillainAsync(SqlConnection connection, StringBuilder sb, int villainId, SqlTransaction transaction)
+    {
+        SqlCommand releaseMinionsFromVillainCmd = new SqlCommand(SqlQueries.releaseMinionsFromVillain, connection, transaction);
+        releaseMinionsFromVillainCmd.Parameters.AddWithValue("@villainId", villainId);
+
+        int minionsDeletedCount = await releaseMinionsFromVillainCmd.ExecuteNonQueryAsync();
+
+        sb.AppendLine($"{minionsDeletedCount} minions were released.");
+    }
+
+    //7
+
+    static async Task PrintMinionNamesAsync(SqlConnection connection)
+    {
+        List<string> minionNames = new List<string>();
+
+        SqlCommand getMinionNamesCmd = new SqlCommand(SqlQueries.printMinionNames, connection);
+        SqlDataReader nameReader = await getMinionNamesCmd.ExecuteReaderAsync();
+
+        while (nameReader.Read())
+        {
+            string minionName = (string)nameReader["Name"];
+            minionNames.Add(minionName);
+        }
+
+        while (minionNames.Count > 0)
+        {
+            Console.WriteLine(minionNames[0]);
+
+            if (minionNames.Count == 1)
+            {
+                minionNames.Remove(minionNames[0]);
+                return;
+            }
+
+            Console.WriteLine(minionNames[minionNames.Count - 1]);
+            minionNames.Remove(minionNames[0]);
+            minionNames.Remove(minionNames[minionNames.Count - 1]);
+        }
+    }
+
+    //8
+
+    static async Task IncreaseMinionAgeAndLowerCaseFirstLetterAsync(SqlConnection connection, int[] minionIds)
+    {
+
+        foreach (var minionId in minionIds)
+        {
+            SqlCommand increaseAgeCmd = new SqlCommand(SqlQueries.increaseMinionAge, connection);
+            increaseAgeCmd.Parameters.AddWithValue("@Id", minionId);
+            await increaseAgeCmd.ExecuteNonQueryAsync();
+        }
+
+        await PrintNameAndAgeOfMinionsAsync(connection);
+    }
+
+    private static async Task PrintNameAndAgeOfMinionsAsync(SqlConnection connection)
+    {
+        SqlCommand printNameAndAgeCmd = new SqlCommand(SqlQueries.printMinionNameAndAge, connection);
+
+        SqlDataReader reader = await printNameAndAgeCmd.ExecuteReaderAsync();
+
+        while (reader.Read())
+        {
+            string name = (string)reader["Name"];
+            int age = (int)reader["Age"];
+
+            Console.WriteLine($"{name} {age}");
+        }
+    }
+
+    //9
+
+
+
 }

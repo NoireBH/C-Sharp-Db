@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MlQz3p2JIiNuhxbohVCqZKzMeLGoy4mvUvw0wIBwmaOUDt+xzPFWa1Ur5Oz0TwPg3zwXuz3/r7mSX+Sx32JKxA==",
+  "dgSpecHash": "6OFX8N+KIt93AzPsMlZ7VnbSVsSOU5qmhvOtVVf2ZI21Xu3+OwFjAoB+mK+g3Zkp1oVccJI1UOvaektfKZ0KIA==",
   "success": true,
-  "projectFilePath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\ADO.NET exercises\\02.Villain Names\\02.Villain Names.csproj",
+  "projectFilePath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\ADO.NET exercises\\02.Villain Names\\ado.net-exercises.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Elmir\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Elmir\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

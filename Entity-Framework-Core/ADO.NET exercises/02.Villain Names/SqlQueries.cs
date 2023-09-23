@@ -57,22 +57,22 @@ namespace _02.Villain_Names
                JOIN Countries AS c ON c.Id = t.CountryCode
               WHERE c.Name = @countryName";
 
-        public const string removeVillain =
-            @"SELECT Name FROM Villains WHERE Id = @villainId
-
-        DELETE FROM MinionsVillains 
-              WHERE VillainId = @villainId
-
-        DELETE FROM Villains
+        public const string removeVillainById =          
+            @"DELETE FROM Villains
               WHERE Id = @villainId";
+
+        public const string releaseMinionsFromVillain =
+            @"DELETE FROM MinionsVillains 
+              WHERE VillainId = @villainId";
 
         public const string printMinionNames = @"SELECT Name FROM Minions";
 
         public const string increaseMinionAge =
             @"UPDATE Minions
-               SET Name = UPPER(LEFT(Name, 1)) + SUBSTRING(Name, 2, LEN(Name)), Age += 1
-             WHERE Id = @Id 
-                SELECT Name, Age FROM Minions";
+               SET Name = LOWER(LEFT(Name, 1)) + SUBSTRING(Name, 2, LEN(Name)), Age += 1
+             WHERE Id = @Id";
+
+        public const string printMinionNameAndAge = @"SELECT Name, Age FROM Minions";
 
         public const string increaseAgeStoredProcedure =
             @"GO
