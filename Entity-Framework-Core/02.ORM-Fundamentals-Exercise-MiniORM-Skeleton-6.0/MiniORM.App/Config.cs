@@ -2,7 +2,7 @@
 {
     public static class Config
     {
-        public const string ConnectionString =
-            @"Server=.\SQLEXPRESS;Database=MiniORM;Integrated Security=True;Encrypt=False;";
+        public const string connectionString = 
+            @"Server=DESKTOP-84CHDHM\SQLEXPRESS;Database=MinionsDB;Integrated Security=True;TrustServerCertificate=True";
     }
 }

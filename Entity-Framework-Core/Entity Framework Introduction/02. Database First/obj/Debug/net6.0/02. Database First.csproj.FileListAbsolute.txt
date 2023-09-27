@@ -1,0 +1,5 @@
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\02. Database First\obj\Debug\net6.0\02. Database First.csproj.AssemblyReference.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\02. Database First\obj\Debug\net6.0\02. Database First.GeneratedMSBuildEditorConfig.editorconfig
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\02. Database First\obj\Debug\net6.0\02. Database First.AssemblyInfoInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\02. Database First\obj\Debug\net6.0\02. Database First.AssemblyInfo.cs
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\02. Database First\obj\Debug\net6.0\02. Database First.csproj.CoreCompileInputs.cache
