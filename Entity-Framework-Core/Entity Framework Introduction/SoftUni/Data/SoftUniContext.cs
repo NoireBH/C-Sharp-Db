@@ -143,17 +143,17 @@ namespace SoftUni.Data
             modelBuilder.Entity<EmployeeProject>(entity =>
             {
                 //Generate composite key
-                entity.HasKey(pk => new object[] {pk.EmployeeId, pk.ProjectId});
+                entity.HasKey(pk => new {pk.EmployeeId, pk.ProjectId});
 
                 //Gererate foreign key
                 entity
                 .HasOne(ep => ep.Employee)
-                .WithMany(e => e.EmployeeProject)
+                .WithMany(e => e.EmployeesProjects)
                 .HasForeignKey(ep => ep.EmployeeId);
 
                 entity
                 .HasOne(ep => ep.Project)
-                .WithMany(p => p.EmployeeProject)
+                .WithMany(p => p.EmployeesProjects)
                 .HasForeignKey(ep => ep.ProjectId);
 
             });

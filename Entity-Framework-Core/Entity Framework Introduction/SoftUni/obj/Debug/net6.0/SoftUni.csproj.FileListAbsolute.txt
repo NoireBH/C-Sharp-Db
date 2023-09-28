@@ -12,11 +12,9 @@ D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Intro
 D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\SoftUni\obj\Debug\net6.0\SoftUni.pdb
 D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\SoftUni\obj\Debug\net6.0\SoftUni.genruntimeconfig.cache
 D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\SoftUni\obj\Debug\net6.0\ref\SoftUni.dll
-D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\SoftUni\bin\Debug\net6.0\Humanizer.dll
 D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\SoftUni\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\SoftUni\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\SoftUni\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\SoftUni\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\SoftUni\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\SoftUni\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Entity Framework Introduction\SoftUni\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
