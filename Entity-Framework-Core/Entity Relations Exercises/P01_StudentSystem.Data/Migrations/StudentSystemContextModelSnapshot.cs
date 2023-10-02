@@ -125,7 +125,6 @@ namespace P01_StudentSystem.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudentId"), 1L, 1);
 
                     b.Property<DateTime?>("Birthday")
-                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
@@ -163,13 +162,13 @@ namespace P01_StudentSystem.Data.Migrations
             modelBuilder.Entity("P01_StudentSystem.Data.Models.Homework", b =>
                 {
                     b.HasOne("P01_StudentSystem.Data.Models.Course", "Course")
-                        .WithMany("Homework")
+                        .WithMany("Homeworks")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("P01_StudentSystem.Data.Models.Student", "Student")
-                        .WithMany("Homework")
+                        .WithMany("Homeworks")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -193,13 +192,13 @@ namespace P01_StudentSystem.Data.Migrations
             modelBuilder.Entity("P01_StudentSystem.Data.Models.StudentCourse", b =>
                 {
                     b.HasOne("P01_StudentSystem.Data.Models.Course", "Course")
-                        .WithMany("StudentCourses")
+                        .WithMany("StudentsCourses")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("P01_StudentSystem.Data.Models.Student", "Student")
-                        .WithMany("StudentCourses")
+                        .WithMany("StudentsCourses")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -211,18 +210,18 @@ namespace P01_StudentSystem.Data.Migrations
 
             modelBuilder.Entity("P01_StudentSystem.Data.Models.Course", b =>
                 {
-                    b.Navigation("Homework");
+                    b.Navigation("Homeworks");
 
                     b.Navigation("Resources");
 
-                    b.Navigation("StudentCourses");
+                    b.Navigation("StudentsCourses");
                 });
 
             modelBuilder.Entity("P01_StudentSystem.Data.Models.Student", b =>
                 {
-                    b.Navigation("Homework");
+                    b.Navigation("Homeworks");
 
-                    b.Navigation("StudentCourses");
+                    b.Navigation("StudentsCourses");
                 });
 #pragma warning restore 612, 618
         }
