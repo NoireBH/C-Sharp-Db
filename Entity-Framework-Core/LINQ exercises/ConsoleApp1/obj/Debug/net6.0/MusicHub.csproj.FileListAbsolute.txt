@@ -1,0 +1,4 @@
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\LINQ exercises\ConsoleApp1\obj\Debug\net6.0\MusicHub.GeneratedMSBuildEditorConfig.editorconfig
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\LINQ exercises\ConsoleApp1\obj\Debug\net6.0\MusicHub.AssemblyInfoInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\LINQ exercises\ConsoleApp1\obj\Debug\net6.0\MusicHub.AssemblyInfo.cs
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\LINQ exercises\ConsoleApp1\obj\Debug\net6.0\MusicHub.csproj.CoreCompileInputs.cache

@@ -789,6 +789,19 @@
         "runtime": {
           "bin/placeholder/P02_FootballBetting.Data.Common.dll": {}
         }
+      },
+      "P02_FootballBetting.Data.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "P02_FootballBetting.Data.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/P02_FootballBetting.Data.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/P02_FootballBetting.Data.Models.dll": {}
+        }
       }
     }
   },
@@ -2013,13 +2026,19 @@
       "type": "project",
       "path": "../P02_FootballBetting.Data.Common/P02_FootballBetting.Data.Common.csproj",
       "msbuildProject": "../P02_FootballBetting.Data.Common/P02_FootballBetting.Data.Common.csproj"
+    },
+    "P02_FootballBetting.Data.Models/1.0.0": {
+      "type": "project",
+      "path": "../P02_FootballBetting.Data.Models/P02_FootballBetting.Data.Models.csproj",
+      "msbuildProject": "../P02_FootballBetting.Data.Models/P02_FootballBetting.Data.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.1",
-      "P02_FootballBetting.Data.Common >= 1.0.0"
+      "P02_FootballBetting.Data.Common >= 1.0.0",
+      "P02_FootballBetting.Data.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2056,6 +2075,9 @@
           "projectReferences": {
             "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Entity Relations Exercises\\P02_FootballBetting.Data.Common\\P02_FootballBetting.Data.Common.csproj": {
               "projectPath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Entity Relations Exercises\\P02_FootballBetting.Data.Common\\P02_FootballBetting.Data.Common.csproj"
+            },
+            "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Entity Relations Exercises\\P02_FootballBetting.Data.Models\\P02_FootballBetting.Data.Models.csproj": {
+              "projectPath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Entity Relations Exercises\\P02_FootballBetting.Data.Models\\P02_FootballBetting.Data.Models.csproj"
             }
           }
         }
