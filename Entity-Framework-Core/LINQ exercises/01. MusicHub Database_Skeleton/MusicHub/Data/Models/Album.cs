@@ -32,7 +32,7 @@ public class Album
     [ForeignKey(nameof(Producer))]
     public int? ProducerId { get; set; }
 
-    public Producer? Producer { get; set; }
+    public virtual Producer? Producer { get; set; }
 
     public virtual ICollection<Song> Songs { get; set; }
 }
