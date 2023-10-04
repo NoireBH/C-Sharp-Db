@@ -10,4 +10,5 @@ public class ValidationConstants
     public const int CommentMaxLength = 250;
     public const int DiagnoseNameLength = 50;
     public const int MedicamentNameMaxLength = 50;
+    public const int DoctorNameMaxLength = 100;
 }

@@ -50,6 +50,28 @@ namespace P01_HospitalDatabase.Data.Migrations
                     b.ToTable("Diagnoses");
                 });
 
+            modelBuilder.Entity("P01_HospitalDatabase.Data.Models.Doctor", b =>
+                {
+                    b.Property<int>("DoctorId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DoctorId"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Specialty")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DoctorId");
+
+                    b.ToTable("Doctor");
+                });
+
             modelBuilder.Entity("P01_HospitalDatabase.Data.Models.Medicament", b =>
                 {
                     b.Property<int>("MedicamentId")
@@ -135,10 +157,15 @@ namespace P01_HospitalDatabase.Data.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("DoctorId")
+                        .HasColumnType("int");
+
                     b.Property<int>("PatientId")
                         .HasColumnType("int");
 
                     b.HasKey("VisitationId");
+
+                    b.HasIndex("DoctorId");
 
                     b.HasIndex("PatientId");
 
@@ -177,13 +204,26 @@ namespace P01_HospitalDatabase.Data.Migrations
 
             modelBuilder.Entity("P01_HospitalDatabase.Data.Models.Visitation", b =>
                 {
+                    b.HasOne("P01_HospitalDatabase.Data.Models.Doctor", "Doctor")
+                        .WithMany("Visitations")
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("P01_HospitalDatabase.Data.Models.Patient", "Patient")
                         .WithMany("Visitations")
                         .HasForeignKey("PatientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Doctor");
+
                     b.Navigation("Patient");
+                });
+
+            modelBuilder.Entity("P01_HospitalDatabase.Data.Models.Doctor", b =>
+                {
+                    b.Navigation("Visitations");
                 });
 
             modelBuilder.Entity("P01_HospitalDatabase.Data.Models.Medicament", b =>

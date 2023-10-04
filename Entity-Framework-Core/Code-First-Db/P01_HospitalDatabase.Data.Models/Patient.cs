@@ -9,6 +9,8 @@ namespace P01_HospitalDatabase.Data.Models
         public Patient()
         {
             Prescriptions = new HashSet<PatientMedicament>();
+            Diagnoses = new HashSet<Diagnose>();
+            Visitations = new HashSet<Visitation>();
         }
 
         [Key]

@@ -9,20 +9,22 @@ namespace P01_HospitalDatabase.Data
     {
         public HospitalContext()
         {
-            
+
         }
 
         public HospitalContext(DbContextOptions options)
             : base(options)
         {
-            
+
         }
 
-        DbSet<Diagnose> Diagnoses { get; set; }
-        DbSet<Medicament> Medicaments { get; set; }
-        DbSet<Patient> Patients { get; set; }
-        DbSet<PatientMedicament> PatientMedicaments { get; set; }
-        DbSet<Visitation> Visitations { get; set; }
+        public DbSet<Diagnose> Diagnoses { get; set; }
+        public DbSet<Medicament> Medicaments { get; set; }
+        public DbSet<Patient> Patients { get; set; }
+        public DbSet<PatientMedicament> PatientMedicaments { get; set; }
+        public DbSet<Visitation> Visitations { get; set; }
+
+        public DbSet<Doctor> Doctors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -40,7 +42,7 @@ namespace P01_HospitalDatabase.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<PatientMedicament>(pm => pm
-            .HasKey(pm => new { pm.PatientId, pm.MedicamentId })); 
+            .HasKey(pm => new { pm.PatientId, pm.MedicamentId }));
         }
     }
 }

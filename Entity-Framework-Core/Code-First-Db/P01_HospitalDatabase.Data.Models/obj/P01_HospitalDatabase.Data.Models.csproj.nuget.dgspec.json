@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Code-First-Db\\P01_HospitalDatabase.Data.Models\\P01_HospitalDatabase.Data.Models.csproj": {}
+  },
+  "projects": {
+    "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Code-First-Db\\P01_HospitalDatabase.Data .Common\\P01_HospitalDatabase.Data .Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Code-First-Db\\P01_HospitalDatabase.Data .Common\\P01_HospitalDatabase.Data .Common.csproj",
+        "projectName": "P01_HospitalDatabase.Data .Common",
+        "projectPath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Code-First-Db\\P01_HospitalDatabase.Data .Common\\P01_HospitalDatabase.Data .Common.csproj",
+        "packagesPath": "C:\\Users\\Elmir\\.nuget\\packages\\",
+        "outputPath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Code-First-Db\\P01_HospitalDatabase.Data .Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Elmir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Code-First-Db\\P01_HospitalDatabase.Data.Models\\P01_HospitalDatabase.Data.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Code-First-Db\\P01_HospitalDatabase.Data.Models\\P01_HospitalDatabase.Data.Models.csproj",
+        "projectName": "P01_HospitalDatabase.Data.Models",
+        "projectPath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Code-First-Db\\P01_HospitalDatabase.Data.Models\\P01_HospitalDatabase.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\Elmir\\.nuget\\packages\\",
+        "outputPath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Code-First-Db\\P01_HospitalDatabase.Data.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Elmir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Code-First-Db\\P01_HospitalDatabase.Data .Common\\P01_HospitalDatabase.Data .Common.csproj": {
+                "projectPath": "D:\\my documents\\Projects\\C-Sharp-Db\\Entity-Framework-Core\\Code-First-Db\\P01_HospitalDatabase.Data .Common\\P01_HospitalDatabase.Data .Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
