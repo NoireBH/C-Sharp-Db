@@ -3,13 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_HospitalDatabase", "P01_HospitalDatabase\P01_HospitalDatabase.csproj", "{FB657E40-4D65-47E4-8A72-FBB27A51EA43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_HospitalDatabase", "P01_HospitalDatabase\P01_HospitalDatabase.csproj", "{FB657E40-4D65-47E4-8A72-FBB27A51EA43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_HospitalDatabase.Data", "P01_HospitalDatabase.Data\P01_HospitalDatabase.Data.csproj", "{F92BDC76-288E-46A9-A4CB-ECD87390DF06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_HospitalDatabase.Data", "P01_HospitalDatabase.Data\P01_HospitalDatabase.Data.csproj", "{F92BDC76-288E-46A9-A4CB-ECD87390DF06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_HospitalDatabase.Data .Common", "P01_HospitalDatabase.Data .Common\P01_HospitalDatabase.Data .Common.csproj", "{5093BA70-011D-4410-A6C5-4CEB6308B525}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_HospitalDatabase.Data .Common", "P01_HospitalDatabase.Data .Common\P01_HospitalDatabase.Data .Common.csproj", "{5093BA70-011D-4410-A6C5-4CEB6308B525}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_HospitalDatabase.Data.Models", "P01_HospitalDatabase.Data.Models\P01_HospitalDatabase.Data.Models.csproj", "{57F8F331-A091-4DD7-93EF-F5D1A6B57088}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_HospitalDatabase.Data.Models", "P01_HospitalDatabase.Data.Models\P01_HospitalDatabase.Data.Models.csproj", "{57F8F331-A091-4DD7-93EF-F5D1A6B57088}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_SalesDatabase", "P03_SalesDatabase\P03_SalesDatabase.csproj", "{2C1B7D10-A908-436C-A33B-63D5433F7793}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_SalesDatabase.Data", "P03_SalesDatabase.Data\P03_SalesDatabase.Data.csproj", "{6D0DFBF3-E511-48EF-B8C1-63174E1D5526}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_SalesDatabase.Data.Models", "P03_SalesDatabase.Data.Models\P03_SalesDatabase.Data.Models.csproj", "{7812A9E9-2EBC-4084-984A-05E6E716ED20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_SalesDatabase.Data.Common", "P03_SalesDatabase.Data.Common\P03_SalesDatabase.Data.Common.csproj", "{4ACF7BC2-0147-45DA-86D6-D8BD384A9D31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{57F8F331-A091-4DD7-93EF-F5D1A6B57088}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57F8F331-A091-4DD7-93EF-F5D1A6B57088}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57F8F331-A091-4DD7-93EF-F5D1A6B57088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C1B7D10-A908-436C-A33B-63D5433F7793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C1B7D10-A908-436C-A33B-63D5433F7793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C1B7D10-A908-436C-A33B-63D5433F7793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C1B7D10-A908-436C-A33B-63D5433F7793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D0DFBF3-E511-48EF-B8C1-63174E1D5526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D0DFBF3-E511-48EF-B8C1-63174E1D5526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D0DFBF3-E511-48EF-B8C1-63174E1D5526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D0DFBF3-E511-48EF-B8C1-63174E1D5526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7812A9E9-2EBC-4084-984A-05E6E716ED20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7812A9E9-2EBC-4084-984A-05E6E716ED20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7812A9E9-2EBC-4084-984A-05E6E716ED20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7812A9E9-2EBC-4084-984A-05E6E716ED20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ACF7BC2-0147-45DA-86D6-D8BD384A9D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ACF7BC2-0147-45DA-86D6-D8BD384A9D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ACF7BC2-0147-45DA-86D6-D8BD384A9D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ACF7BC2-0147-45DA-86D6-D8BD384A9D31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
