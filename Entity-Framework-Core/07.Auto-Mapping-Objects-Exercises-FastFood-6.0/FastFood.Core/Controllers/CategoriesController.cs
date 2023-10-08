@@ -2,7 +2,10 @@
 {
     using System;
     using AutoMapper;
+    using AutoMapper.QueryableExtensions;
     using Data;
+    using FastFood.Core.ViewModels.Positions;
+    using FastFood.Models;
     using Microsoft.AspNetCore.Mvc;
     using ViewModels.Categories;
 
@@ -25,12 +28,21 @@
         [HttpPost]
         public IActionResult Create(CreateCategoryInputModel model)
         {
-            throw new NotImplementedException();
+            var category = _mapper.Map<Category>(model);
+
+            _context.Categories.Add(category);
+            _context.SaveChanges();
+
+            return RedirectToAction("All", "Categories");
         }
 
         public IActionResult All()
         {
-            throw new NotImplementedException();
+            var categories = _context.Categories
+                .ProjectTo<CategoryAllViewModel>(_mapper.ConfigurationProvider)
+                .ToList();
+
+            return View(categories);
         }
     }
 }

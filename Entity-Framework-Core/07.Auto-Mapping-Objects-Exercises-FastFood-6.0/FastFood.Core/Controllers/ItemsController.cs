@@ -5,6 +5,9 @@
     using AutoMapper;
     using AutoMapper.QueryableExtensions;
     using Data;
+    using FastFood.Core.ViewModels.Categories;
+    using FastFood.Core.ViewModels.Employees;
+    using FastFood.Models;
     using Microsoft.AspNetCore.Mvc;
     using ViewModels.Items;
 
@@ -21,18 +24,31 @@
 
         public IActionResult Create()
         {
-            throw new NotImplementedException();
+            var categories = _context.Categories
+                .ProjectTo<CreateItemViewModel>(_mapper.ConfigurationProvider)
+                .ToList();
+
+            return View(categories);
         }
 
         [HttpPost]
         public IActionResult Create(CreateItemInputModel model)
         {
-            throw new NotImplementedException();
+            Item item = _mapper.Map<Item>(model);
+
+            _context.Items.Add(item);
+            _context.SaveChanges();
+
+            return RedirectToAction("All");
         }
 
         public IActionResult All()
         {
-            throw new NotImplementedException();
+            var items = _context.Items
+                .ProjectTo<ItemsAllViewModels>(_mapper.ConfigurationProvider)
+                .ToList();
+
+            return View(items);
         }
     }
 }

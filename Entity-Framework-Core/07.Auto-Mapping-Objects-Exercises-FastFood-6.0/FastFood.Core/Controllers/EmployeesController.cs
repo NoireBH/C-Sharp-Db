@@ -2,7 +2,9 @@
 {
     using System;
     using AutoMapper;
+    using AutoMapper.QueryableExtensions;
     using Data;
+    using FastFood.Models;
     using Microsoft.AspNetCore.Mvc;
     using ViewModels.Employees;
 
@@ -19,18 +21,32 @@
 
         public IActionResult Register()
         {
-            throw new NotImplementedException();
+            var positions = _context.Positions
+                .ProjectTo<RegisterEmployeeViewModel>(_mapper.ConfigurationProvider)
+                .ToList();
+
+            return View(positions);
         }
 
         [HttpPost]
         public IActionResult Register(RegisterEmployeeInputModel model)
         {
-            throw new NotImplementedException();
+            var employee = _mapper.Map<Employee>(model);
+
+            _context.Employees.Add(employee);
+
+            _context.SaveChanges();
+
+            return RedirectToAction("All", "Employees");
         }
 
         public IActionResult All()
         {
-            throw new NotImplementedException();
+            var employees = _context.Employees
+                .ProjectTo<EmployeesAllViewModel>(_mapper.ConfigurationProvider)
+                .ToList();
+
+            return View(employees);
         }
     }
 }
