@@ -140,12 +140,20 @@ SELECT
 	h.Id,
 	h.Name
 FROM Hotels AS h
-JOIN HotelsRooms AS hr ON hr.HotelId = h.Id
-JOIN Rooms AS r ON r.Id = hr.RoomId
-JOIN Bookings AS b on b.RoomId = r.Id
+INNER JOIN HotelsRooms AS hr ON hr.HotelId = h.Id
+INNER JOIN Rooms AS r ON r.Id = hr.RoomId
+INNER JOIN Bookings AS b ON H.Id = B.HotelId
 WHERE r.Id = 8
 GROUP BY h.Id, h.Name
 ORDER BY COUNT(b.Id) DESC
+
+SELECT H.Id, H.Name
+FROM Hotels H
+INNER JOIN HotelsRooms HR ON H.Id = HR.HotelId
+INNER JOIN Rooms R ON HR.RoomId = R.Id
+INNER JOIN Bookings B ON H.Id = B.HotelId AND R.[Type] = 'VIP Apartment'
+GROUP BY H.Id, H.Name
+ORDER BY COUNT(*) DESC;
 
 
 SELECT
@@ -182,12 +190,13 @@ FROM
 	 DestinationName = d.Name,
 	 CountryName = c.Name
 FROM Bookings AS b
-JOIN Hotels AS h ON h.Id = b.HotelId
 JOIN Tourists AS t ON t.Id = b.TouristId
-JOIN Countries AS c ON c.Id = t.CountryId
-JOIN Destinations AS d ON d.CountryId = c.Id
+JOIN Hotels AS h ON h.Id = b.HotelId
+JOIN Destinations AS d ON d.Id = h.DestinationId
+JOIN Countries AS c ON c.Id = d.CountryId
+
 ) AS t
-WHERE  t.ArrivalDate < '2023-12-31' AND t.BookingId % 2 = 0
+WHERE  t.ArrivalDate < '2023-12-31' AND  % 2 <> 0
 ORDER BY t.CountryName, t.ArrivalDate
 
 
@@ -198,6 +207,28 @@ SELECT
 FROM Bookings AS b
 JOIN Hotels AS h ON h.Id = b.HotelId
 WHERE  FORMAT(b.ArrivalDate, 'yyyy-MM-dd') < '2023-12-31'
+
+SELECT TOP 10
+    H.Name AS HotelName,
+    Dst.Name AS DestinationName,
+    HC.Name AS HotelCountryName
+FROM
+    Bookings AS B
+JOIN
+    Tourists AS T ON B.TouristId = T.Id
+JOIN
+    Hotels AS H ON B.HotelId = H.Id
+JOIN
+    Destinations AS Dst ON H.DestinationId = Dst.Id
+JOIN
+    Countries AS HC ON Dst.CountryId = HC.Id
+WHERE
+    B.ArrivalDate < '2023-12-31'
+    AND
+    B.HotelId % 2 <> 0  -- Select hotels with odd IDs
+ORDER BY
+    HC.Name ASC,
+    B.ArrivalDate ASC;
 
 --9
 
