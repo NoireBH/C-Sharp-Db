@@ -2,6 +2,7 @@
 using AutoMapper.QueryableExtensions;
 using CarDealer.Data;
 using CarDealer.DTOs.Export;
+using CarDealer.DTOs.Export.ExportSale;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
 using CarDealer.Utilities;
@@ -16,7 +17,7 @@ namespace CarDealer
             var context = new CarDealerContext();
             string inputXml = @"../../../Datasets/sales.xml";
 
-            string result = GetTotalSalesByCustomer(context);
+            string result = GetSalesWithAppliedDiscount(context);
             Console.WriteLine(result);
 
         }
@@ -265,6 +266,18 @@ namespace CarDealer
                 .ToArray();
 
             return xmlHelper.Serialize(totalSalesDtos, "customers");
+        }
+
+        public static string GetSalesWithAppliedDiscount(CarDealerContext context)
+        {
+            IMapper mapper = CreateMapper();
+            var xmlHelper = new XmlHelper();
+
+            var salesWithDiscount = context.Sales
+                .ProjectTo<SaleDto>(mapper.ConfigurationProvider)
+                .ToArray();
+
+            return xmlHelper.Serialize(salesWithDiscount, "sales");
         }
 
         private static IMapper CreateMapper()
