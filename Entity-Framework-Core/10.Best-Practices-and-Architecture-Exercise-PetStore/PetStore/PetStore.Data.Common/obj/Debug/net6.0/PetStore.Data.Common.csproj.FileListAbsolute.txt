@@ -1,0 +1,11 @@
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Data.Common\bin\Debug\net6.0\PetStore.Data.Common.deps.json
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Data.Common\bin\Debug\net6.0\PetStore.Data.Common.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Data.Common\bin\Debug\net6.0\PetStore.Data.Common.pdb
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Data.Common\obj\Debug\net6.0\PetStore.Data.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Data.Common\obj\Debug\net6.0\PetStore.Data.Common.AssemblyInfoInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Data.Common\obj\Debug\net6.0\PetStore.Data.Common.AssemblyInfo.cs
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Data.Common\obj\Debug\net6.0\PetStore.Data.Common.csproj.CoreCompileInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Data.Common\obj\Debug\net6.0\PetStore.Data.Common.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Data.Common\obj\Debug\net6.0\refint\PetStore.Data.Common.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Data.Common\obj\Debug\net6.0\PetStore.Data.Common.pdb
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Data.Common\obj\Debug\net6.0\ref\PetStore.Data.Common.dll

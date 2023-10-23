@@ -1,0 +1,11 @@
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Services.Mapping\bin\Debug\net6.0\PetStore.Services.Mapping.deps.json
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Services.Mapping\bin\Debug\net6.0\PetStore.Services.Mapping.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Services.Mapping\bin\Debug\net6.0\PetStore.Services.Mapping.pdb
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Services.Mapping\obj\Debug\net6.0\PetStore.Services.Mapping.GeneratedMSBuildEditorConfig.editorconfig
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Services.Mapping\obj\Debug\net6.0\PetStore.Services.Mapping.AssemblyInfoInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Services.Mapping\obj\Debug\net6.0\PetStore.Services.Mapping.AssemblyInfo.cs
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Services.Mapping\obj\Debug\net6.0\PetStore.Services.Mapping.csproj.CoreCompileInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Services.Mapping\obj\Debug\net6.0\PetStore.Services.Mapping.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Services.Mapping\obj\Debug\net6.0\refint\PetStore.Services.Mapping.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Services.Mapping\obj\Debug\net6.0\PetStore.Services.Mapping.pdb
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Services.Mapping\obj\Debug\net6.0\ref\PetStore.Services.Mapping.dll

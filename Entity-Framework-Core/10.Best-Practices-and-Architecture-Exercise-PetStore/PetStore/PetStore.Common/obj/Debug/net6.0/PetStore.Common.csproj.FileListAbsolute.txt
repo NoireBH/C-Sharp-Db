@@ -1,0 +1,11 @@
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Common\bin\Debug\net6.0\PetStore.Common.deps.json
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Common\bin\Debug\net6.0\PetStore.Common.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Common\bin\Debug\net6.0\PetStore.Common.pdb
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Common\obj\Debug\net6.0\PetStore.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Common\obj\Debug\net6.0\PetStore.Common.AssemblyInfoInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Common\obj\Debug\net6.0\PetStore.Common.AssemblyInfo.cs
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Common\obj\Debug\net6.0\PetStore.Common.csproj.CoreCompileInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Common\obj\Debug\net6.0\PetStore.Common.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Common\obj\Debug\net6.0\refint\PetStore.Common.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Common\obj\Debug\net6.0\PetStore.Common.pdb
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\10.Best-Practices-and-Architecture-Exercise-PetStore\PetStore\PetStore.Common\obj\Debug\net6.0\ref\PetStore.Common.dll
