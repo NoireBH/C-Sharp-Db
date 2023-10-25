@@ -1,0 +1,15 @@
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\bin\Debug\net6.0\Eventmi.Core.deps.json
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\bin\Debug\net6.0\Eventmi.Core.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\bin\Debug\net6.0\Eventmi.Core.pdb
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\bin\Debug\net6.0\Eventmi.Infrastructure.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\bin\Debug\net6.0\Eventmi.Infrastructure.pdb
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\obj\Debug\net6.0\Eventmi.Core.csproj.AssemblyReference.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\obj\Debug\net6.0\Eventmi.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\obj\Debug\net6.0\Eventmi.Core.AssemblyInfoInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\obj\Debug\net6.0\Eventmi.Core.AssemblyInfo.cs
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\obj\Debug\net6.0\Eventmi.Core.csproj.CoreCompileInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\obj\Debug\net6.0\Eventmi.Core.csproj.CopyComplete
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\obj\Debug\net6.0\Eventmi.Core.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\obj\Debug\net6.0\refint\Eventmi.Core.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\obj\Debug\net6.0\Eventmi.Core.pdb
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\EventMi.Core\obj\Debug\net6.0\ref\Eventmi.Core.dll

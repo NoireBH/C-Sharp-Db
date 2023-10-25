@@ -1,0 +1,14 @@
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\bin\Debug\net6.0\Eventmi.Infrastructure.deps.json
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\bin\Debug\net6.0\Eventmi.Infrastructure.runtimeconfig.json
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\bin\Debug\net6.0\Eventmi.Infrastructure.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\bin\Debug\net6.0\Eventmi.Infrastructure.pdb
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\obj\Debug\net6.0\Eventmi.Infrastructure.csproj.AssemblyReference.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\obj\Debug\net6.0\Eventmi.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\obj\Debug\net6.0\Eventmi.Infrastructure.AssemblyInfoInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\obj\Debug\net6.0\Eventmi.Infrastructure.AssemblyInfo.cs
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\obj\Debug\net6.0\Eventmi.Infrastructure.csproj.CoreCompileInputs.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\obj\Debug\net6.0\Eventmi.Infrastructure.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\obj\Debug\net6.0\refint\Eventmi.Infrastructure.dll
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\obj\Debug\net6.0\Eventmi.Infrastructure.pdb
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\obj\Debug\net6.0\Eventmi.Infrastructure.genruntimeconfig.cache
+D:\my documents\Projects\C-Sharp-Db\Entity-Framework-Core\Eventmi\Eventmi.Infrastructure\obj\Debug\net6.0\ref\Eventmi.Infrastructure.dll
