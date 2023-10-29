@@ -10,6 +10,7 @@
         public SoftJailProfile()
         {
             CreateMap<Cell, ImportDepartmentCellDto>();
+            CreateMap<ImportPrisonersAndMailsDto, Prisoner>();          
         }
     }
 }

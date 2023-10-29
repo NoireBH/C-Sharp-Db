@@ -34,7 +34,15 @@
                     File.ReadAllText(baseDir + "ImportDepartmentsCells.json"));
             PrintAndExportEntityToFile(departmentsCells, exportDir + "ImportDepartmentsCells.txt");
 
-            
+            var prisonersMails =
+                DataProcessor.Deserializer.ImportPrisonersMails(context,
+                    File.ReadAllText(baseDir + "ImportPrisonersMails.json"));
+            PrintAndExportEntityToFile(prisonersMails, exportDir + "ImportPrisonersMails.txt");
+
+            var officersPrisoners = 
+                DataProcessor.Deserializer.ImportOfficersPrisoners(context, File.ReadAllText(baseDir + "ImportOfficersPrisoners.xml"));
+            PrintAndExportEntityToFile(officersPrisoners, exportDir + "ImportOfficersPrisoners.txt");
+
         }
 
         private static void ExportEntities(SoftJailDbContext context, string exportDir)
