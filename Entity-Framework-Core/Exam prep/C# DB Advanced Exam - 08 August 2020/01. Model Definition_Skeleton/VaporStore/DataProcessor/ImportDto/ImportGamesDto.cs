@@ -27,6 +27,6 @@ namespace VaporStore.DataProcessor.ImportDto
         [Required]
         public string Genre { get; set; } = null!;
 
-        public ImportNameOfTagDto[] Tags { get; set; }
+        public string[] Tags { get; set; }
     }
 }
