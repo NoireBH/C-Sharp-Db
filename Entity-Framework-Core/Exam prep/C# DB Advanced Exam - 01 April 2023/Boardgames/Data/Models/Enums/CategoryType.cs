@@ -12,6 +12,6 @@ namespace Boardgames.Data.Models.Enums
 		Children = 1,
 		Family = 2,
 		Party = 3,
-		Stragety = 4
+		Strategy = 4
 	}
 }
